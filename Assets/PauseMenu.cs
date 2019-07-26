@@ -14,11 +14,10 @@ public class PauseMenu : MonoBehaviour
     public static PauseMenu Instance { private set { _instance = value; }
         get
         {
-            /*if (_instance == null)
+            if (_instance == null)
             {
                 GameObject instance = Instantiate((GameObject)Resources.Load("PauseMenu"));
-
-            }*/
+            }
             return _instance;
         }
     }
