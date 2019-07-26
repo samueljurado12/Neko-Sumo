@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
+    [SerializeField]
+    Button firstButton;
+
     static PauseMenu _instance;
     public static PauseMenu Instance { private set { _instance = value; }
         get
         {
-            if (_instance == null)
+            /*if (_instance == null)
             {
                 GameObject instance = Instantiate((GameObject)Resources.Load("PauseMenu"));
 
-            }
+            }*/
             return _instance;
         }
     }
@@ -49,7 +53,6 @@ public class PauseMenu : MonoBehaviour
     public void Show()
     {
         transform.DOScaleY(1, 0.1f).OnComplete(() => GetComponentInChildren<Button>().Select());
-
     }
 
     public void Hide()
@@ -69,6 +72,6 @@ public class PauseMenu : MonoBehaviour
 
     public void MenuButton()
     {
-
+        ScenesManager.Instance.LoadScene(0);
     }
 }
