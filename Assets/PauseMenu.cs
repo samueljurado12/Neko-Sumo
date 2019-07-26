@@ -29,20 +29,19 @@ public class PauseMenu : MonoBehaviour
         transform.localScale = Vector3.right;
         
     }
-    
-    void Update()
+
+    public void SwitchMenu()
     {
-        if (Input.GetButtonDown("Cancel"))
-            if (!visible)
-            {
-                Show();
-                visible = true;
-            }
-            else
-            {
-                ContinueButton();
-                visible = false;
-            }
+        if (!visible)
+        {
+            Show();
+            visible = true;
+        }
+        else
+        {
+            ContinueButton();
+            visible = false;
+        }
     }
 
     bool visible;
