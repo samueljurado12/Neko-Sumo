@@ -28,4 +28,9 @@ public class MainMenuScript : MonoBehaviour
     {
         ScenesManager.Instance.LoadScene(1);
     }
+
+    public void CreditsButton()
+    {
+        ScenesManager.Instance.LoadScene(2);
+    }
 }
