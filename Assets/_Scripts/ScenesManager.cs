@@ -21,12 +21,12 @@ public class ScenesManager : MonoBehaviour
 
     public void LoadScene(int index)
     {
-        fadeGraphic.DOFade(1, 1f).OnComplete(() => SceneManager.LoadScene(index));
+        fadeGraphic.DOFade(1, 0.5f).OnComplete(() => SceneManager.LoadScene(index));
     }
 
     private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
-        fadeGraphic.DOFade(0, 1);
+        fadeGraphic.DOFade(0, 0.5f);
     }
 
     public void ExitButton()
