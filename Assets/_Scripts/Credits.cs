@@ -14,7 +14,7 @@ public class Credits : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && ScenesManager.Instance.IsJoystickConnected())
             returnButton.Select();
     }
 }

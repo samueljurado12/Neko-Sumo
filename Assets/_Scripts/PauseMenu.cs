@@ -38,12 +38,11 @@ public class PauseMenu : MonoBehaviour
         if (!visible)
         {
             Show();
-            visible = true;
         }
         else
         {
             ContinueButton();
-            visible = false;
+            
         }
     }
 
@@ -51,7 +50,14 @@ public class PauseMenu : MonoBehaviour
 
     public void Show()
     {
-        transform.DOScaleY(1, 0.1f).OnComplete(() => GetComponentInChildren<Button>().Select());
+        transform.DOScaleY(1, 0.1f).OnComplete(() => FocusButton());
+        visible = true;
+    }
+
+    void FocusButton()
+    {
+        if (ScenesManager.Instance.IsJoystickConnected())
+            GetComponentInChildren<Button>().Select();
     }
 
     public void Hide()
@@ -62,6 +68,7 @@ public class PauseMenu : MonoBehaviour
     public void ContinueButton()
     {
         Hide();
+        visible = false;
     }
 
     public void InstructionsButtons()
@@ -71,6 +78,7 @@ public class PauseMenu : MonoBehaviour
 
     public void MenuButton()
     {
-        ScenesManager.Instance.LoadScene(0);
+        Hide();
+        ReturnConfirmation.Instance.Show();
     }
 }

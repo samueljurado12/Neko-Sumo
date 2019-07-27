@@ -24,6 +24,7 @@ public class ScenesManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += SceneManager_sceneLoaded;
             //returnButton.Select();
+            StartCoroutine(GetControllers());
         }
 
     }
@@ -40,9 +41,38 @@ public class ScenesManager : MonoBehaviour
         fadeGraphic.DOFade(1, 0.25f).OnComplete(() => SceneManager.LoadScene(index));
     }
 
+    
+
     private void Update()
     {
         
+            
+    }
+
+    public string[] joysticks;
+    IEnumerator GetControllers()
+    {
+        while(true)
+        {
+            joysticks = Input.GetJoystickNames();
+            if (IsJoystickConnected())
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            else
+            {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+            yield return new WaitForSeconds(2);
+        }
+        
+    }
+
+    public bool IsJoystickConnected()
+    {
+        return joysticks.Length > 0 && !string.IsNullOrEmpty(joysticks[0]);
     }
 
     private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)

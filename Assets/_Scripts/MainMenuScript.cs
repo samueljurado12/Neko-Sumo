@@ -11,7 +11,7 @@ public class MainMenuScript : MonoBehaviour
 
     private void Start()
     {
-        if (Input.GetJoystickNames().Length > 0);
+        if (ScenesManager.Instance.IsJoystickConnected())
             buttons[0].Select();
 
         Cursor.visible = false;
@@ -20,7 +20,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && ScenesManager.Instance.IsJoystickConnected())
             buttons[0].Select();
     }
     
