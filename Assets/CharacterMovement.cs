@@ -1,6 +1,6 @@
 ﻿/*
  * Author: Samuel Jurado Quintana
- * Co-Authors: Enrique Botella Garcés
+ * Co-Authors: Enrique Botella Garcés, Jesús Garcés Villarrubia
  * Date: 26/07/2019
  */
 
@@ -17,11 +17,11 @@ public class CharacterMovement : MonoBehaviour
     private int playerNumber = 1;
 
     [SerializeField]
-    private LayerMask layerMask;
+    private LayerMask platformLayer;
 
     [Range(1, 10)]
     [SerializeField]
-    private float speed = 1;
+    private float speed = 1, fallMultiplier = 2.5f, lowJumpMultiplier = 2;
 
     [Range(0,1)]
     [SerializeField]
@@ -29,7 +29,7 @@ public class CharacterMovement : MonoBehaviour
 
     [Range(1, 100)]
     [SerializeField]
-    private float forceMultiplier = 1;
+    private float forceMultiplier = 1, jumpForce = 5;
     #endregion
 
     #region Input and Unity components
@@ -39,12 +39,14 @@ public class CharacterMovement : MonoBehaviour
 
     #region Private variables
     private Vector2 _horizontalMovement, _raycastOriginLeft, _raycastOriginRight;
+    private bool jumpRequest;
     #endregion
 
     #region Unity methods
     // Start is called before the first frame update
     void Start()
     {
+        jumpRequest = false;
         horizontalAxis = 0;
         _horizontalMovement = new Vector2();
         _raycastOriginLeft = new Vector2(transform.position.x - 0.25f, transform.position.y - 0.5f);
@@ -57,12 +59,18 @@ public class CharacterMovement : MonoBehaviour
     {
         Raycast();
         horizontalAxis = Input.GetAxis("Horizontal" + playerNumber);
+        jumpRequest = Input.GetButtonDown("Jump" + playerNumber);
+        Debug.Log(GetGrounded());
     }
 
     private void FixedUpdate()
     {
         Jump();
         HorizontalMovement();
+        if (!GetGrounded())
+        {
+            Fall();
+        }
     }
     #endregion
 
@@ -71,17 +79,30 @@ public class CharacterMovement : MonoBehaviour
     private void HorizontalMovement()
     {
         _horizontalMovement.x = speed * horizontalAxis;
-        Debug.Log(GetGrounded());
         if (rb.velocity.x < speed)
             rb.AddForce(_horizontalMovement * forceMultiplier);
     }
 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump" + playerNumber) && GetGrounded())
+        if (jumpRequest && GetGrounded())
         {
-            rb.AddForce(Vector2.up * forceMultiplier * 2, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            jumpRequest = false;
         }
+    }
+
+    private void Fall()
+    {
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * Time.deltaTime * (fallMultiplier - 1);
+        }
+        else if (rb.velocity.y > 0 && !Input.GetButton("Jump" + playerNumber))
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity * Time.deltaTime * (lowJumpMultiplier - 1);
+        }
+        
     }
     #endregion
 
@@ -99,8 +120,8 @@ public class CharacterMovement : MonoBehaviour
 
     private bool GetGrounded()
     {
-        return Physics2D.Raycast(_raycastOriginLeft, Vector2.down, raycastDistance, layerMask) ||
-            Physics2D.Raycast(_raycastOriginRight, Vector2.down, raycastDistance, layerMask);
+        return Physics2D.Raycast(_raycastOriginLeft, Vector2.down, raycastDistance, platformLayer) ||
+            Physics2D.Raycast(_raycastOriginRight, Vector2.down, raycastDistance, platformLayer);
     }
     #endregion
 
