@@ -136,6 +136,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void Jump()
     {
+        Debug.Log(GetGrounded());
         if (jumpRequest && GetGrounded())
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
