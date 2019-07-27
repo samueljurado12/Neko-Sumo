@@ -32,7 +32,7 @@ public class PlatformManager : MonoBehaviour
     private void Update()
     {
         
-        if (players.FindAll(o => !o.GetGrounded()).Count == 1)
+        /*if (players.FindAll(o => !o.GetGrounded()).Count == 1)
         {
             Debug.Log("Un jugador ha caído");
         }
