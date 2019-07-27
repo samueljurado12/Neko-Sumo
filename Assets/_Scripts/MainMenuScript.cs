@@ -31,6 +31,14 @@ public class MainMenuScript : MonoBehaviour
 
     public void CreditsButton()
     {
-        ScenesManager.Instance.LoadScene(2);
+        ScenesManager.Instance.LoadScene(2, Color.black);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.ExitPlaymode();
+#endif
     }
 }

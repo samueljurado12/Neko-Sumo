@@ -14,14 +14,35 @@ public class ScenesManager : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-        SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+            //returnButton.Select();
+        }
+
     }
 
     public void LoadScene(int index)
     {
-        fadeGraphic.DOFade(1, 0.5f).OnComplete(() => SceneManager.LoadScene(index));
+        LoadScene(index, Color.white);
+    }
+
+    public void LoadScene(int index, Color color)
+    {
+        color.a = 0;
+        fadeGraphic.color = color;
+        fadeGraphic.DOFade(1, 0.25f).OnComplete(() => SceneManager.LoadScene(index));
+    }
+
+    private void Update()
+    {
+        
     }
 
     private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
