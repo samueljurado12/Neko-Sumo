@@ -8,10 +8,13 @@ public class BallLauncher : MonoBehaviour
     [SerializeField]
     float launchForce, cooldown = 5;
     float timeRemaining;
+    Animator anim;
+    [SerializeField]
+    GameObject ballHolder;
 
     void Start()
     {
-        
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -19,9 +22,9 @@ public class BallLauncher : MonoBehaviour
         if (timeRemaining > 0)
             timeRemaining -= Time.deltaTime;
 
-        if (Input.GetButtonDown("Furball" + GetComponent<CharacterMovement>().PlayerNumber) && timeRemaining <= 0)
+        if (Input.GetButtonDown("Furball" + GetComponentInParent<CharacterMovement>().PlayerNumber) && timeRemaining <= 0)
         {
-            ThrowHairBall();
+            anim.SetTrigger("Spit");
             timeRemaining = cooldown;
         }
     }
@@ -31,8 +34,11 @@ public class BallLauncher : MonoBehaviour
     public void ThrowHairBall()
     {
         Furball ball = ((GameObject)Instantiate(ballPrefab)).GetComponent<Furball>();
-        Vector3 force = Vector2.right * transform.localScale.x * launchForce;
+        ball.transform.parent = ballHolder.transform;
+        ball.transform.localPosition = Vector3.zero;
+        Vector3 force = Vector2.left * transform.localScale.x * launchForce;
         ball.rigidbody.AddForce(force, ForceMode2D.Impulse);
-        ball.transform.position = transform.position + Vector3.up;
+        ball.transform.parent = null;
     }
+
 }
