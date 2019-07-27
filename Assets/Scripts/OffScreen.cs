@@ -5,11 +5,10 @@ using DG.Tweening;
 
 public class OffScreen : MonoBehaviour
 {
-    bool victory;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && victory == false)
+        if (other.CompareTag("Player"))
         {
             int player = other.GetComponent<CharacterMovement>().PlayerNumber;
             Animator ganador = null;
@@ -17,23 +16,24 @@ public class OffScreen : MonoBehaviour
             if (player == 1)
             {
                 n = 2;
-                ganador = GameObject.Find("Character2").GetComponentInChildren<Animator>();
+                Debug.Log(n);
+                ganador = GameManager.Instance.player2.GetComponentInChildren<Animator>();
             }
             else if (player == 2)
             {
                 n = 1;
-                ganador = GameObject.Find("Character1").GetComponentInChildren<Animator>();
-                
+                Debug.Log(n);
+                ganador = GameManager.Instance.player1.GetComponentInChildren<Animator>();
             }
-            if (ganador != null)
-            {
-                ganador.SetTrigger("Winner");
-                ganador.GetComponentInParent<Rigidbody2D>().simulated = false;
-                PlatformManager.Instance.GetComponent<Rigidbody2D>().simulated = false;
-                cameraTarget = ganador.transform;
-                Camera.main.DOOrthoSize(2, 1);
-                victory = true;
-            }
+
+            GameManager.Instance.player1.GetComponent<Rigidbody2D>().simulated = false;
+            GameManager.Instance.player2.GetComponent<Rigidbody2D>().simulated = false;
+            PlatformManager.Instance.GetComponent<Rigidbody2D>().simulated = false;
+
+            ganador.SetTrigger("Winner");
+
+            cameraTarget = ganador.transform;
+            Camera.main.DOOrthoSize(2, 1);
 
             StartCoroutine(PantallaVictoria(n));
 
