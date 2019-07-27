@@ -85,11 +85,11 @@ public class CharacterMovement : MonoBehaviour
         }
         if(rb.velocity.y < 0 && !GetGrounded())
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1);
+            rb.velocity += Vector2.up * Physics2D.gravity.y * Time.deltaTime * (fallMultiplier - 1);
         }
         else if(rb.velocity.y < 0 && !GetGrounded() && !Input.GetButton("Jump"))
         {
-            rb.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1);
+            rb.velocity += Vector2.up * Physics2D.gravity * Time.deltaTime * (lowJumpMultiplier - 1);
         }
     }
     #endregion
