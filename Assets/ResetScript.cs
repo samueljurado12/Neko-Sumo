@@ -9,7 +9,7 @@ public class ResetScript : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.R)){
-            UnityEditor.SceneManagement.EditorSceneManager.LoadScene("TestScene");
+            UnityEditor.SceneManagement.EditorSceneManager.LoadScene("Test");
         }
     }
 }
