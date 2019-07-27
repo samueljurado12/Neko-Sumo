@@ -7,6 +7,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityChan;
 [SelectionBase]
 public class CharacterMovement : MonoBehaviour
 {
@@ -24,11 +25,14 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private LayerMask platformLayer;
 
+    [SerializeField]
+    private GameObject tail;
+
     [Range(1, 10)]
     [SerializeField]
     private float speed = 1, fallMultiplier = 2.5f, lowJumpMultiplier = 2;
 
-    [Range(0,1)]
+    [Range(0, 1)]
     [SerializeField]
     private float raycastDistance = 1;
 
@@ -45,6 +49,7 @@ public class CharacterMovement : MonoBehaviour
     #region Private variables
     private Vector2 _horizontalMovement, _raycastOriginLeft, _raycastOriginRight;
     private bool jumpRequest;
+    private Vector3 facingLeft, facingRight;
     #endregion
 
     #region Unity methods
@@ -57,6 +62,8 @@ public class CharacterMovement : MonoBehaviour
         _raycastOriginLeft = new Vector2(transform.position.x - 0.25f, transform.position.y - 0.5f);
         _raycastOriginRight = new Vector2(transform.position.x + 0.25f, transform.position.y - 0.5f);
         rb = gameObject.GetComponent<Rigidbody2D>();
+        facingRight = Vector3.one;
+        facingLeft = new Vector3(-1, 1, 1);
     }
 
     // Update is called once per frame
@@ -71,6 +78,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        SetFacing();
         Jump();
         HorizontalMovement();
         if (!GetGrounded())
@@ -87,6 +95,30 @@ public class CharacterMovement : MonoBehaviour
         _horizontalMovement.x = speed * horizontalAxis;
         if (rb.velocity.x < speed)
             rb.AddForce(_horizontalMovement * forceMultiplier);
+    }
+
+    private void SetFacing()
+    {
+        if (horizontalAxis != 0)
+        {
+            if (rb.velocity.x < 0)
+            {
+                transform.localScale = facingLeft;
+            }
+            else if (rb.velocity.x > 0)
+            {
+                transform.localScale = facingRight;
+            }
+            
+        }
+        foreach (SpringBone t in tail.GetComponentsInChildren<SpringBone>())
+        {
+            t.springForce.x = -0.001f * transform.localScale.x;
+            if (t.springForce.x * 10 * t.stiffnessForce > 0)
+            {
+                t.stiffnessForce *= -1;
+            }
+        }
     }
 
     private void Jump()
@@ -108,7 +140,7 @@ public class CharacterMovement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity * Time.deltaTime * (lowJumpMultiplier - 1);
         }
-        
+
     }
     #endregion
 
