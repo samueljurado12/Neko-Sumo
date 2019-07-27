@@ -57,12 +57,17 @@ public class PauseMenu : MonoBehaviour
     void FocusButton()
     {
         if (ScenesManager.Instance.IsJoystickConnected())
+        {
             GetComponentInChildren<Button>().Select();
+            Time.timeScale = 0;
+        }
+            
     }
 
     public void Hide()
     {
         transform.DOScaleY(0, 0.1f);
+        Time.timeScale = 1;
     }
 
     public void ContinueButton()

@@ -155,6 +155,7 @@ public class CharacterMovement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity * Time.deltaTime * (lowJumpMultiplier - 1);
         }
+        //animator.GetCurrentAnimatorStateInfo(0).IsName("Jump");
 
     }
     #endregion

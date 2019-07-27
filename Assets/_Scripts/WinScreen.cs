@@ -5,6 +5,7 @@ using DG.Tweening;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class WinScreen : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class WinScreen : MonoBehaviour
 
     [SerializeField]
     TMP_Text label;
+
+    [SerializeField]
+    Image belt;
 
     void Awake()
     {
@@ -27,13 +31,15 @@ public class WinScreen : MonoBehaviour
         
     }
 
-    public void Show(int player)
+    public void Show(int playerNumber)
     {
         transform.DOScale(1, 0.25f);
         if (ScenesManager.Instance.IsJoystickConnected())
             firstButton.Select();
 
-        label.text = "GANA EL JUGADOR " + player;
+        label.text = "GANA EL JUGADOR " + playerNumber;
+
+        belt.color = playerNumber == 1 ? new Color(204, 0, 0) : new Color(0, 116, 204);
 
     }
 

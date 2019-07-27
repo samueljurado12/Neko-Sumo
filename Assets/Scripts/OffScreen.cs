@@ -16,13 +16,11 @@ public class OffScreen : MonoBehaviour
             if (player == 1)
             {
                 n = 2;
-                Debug.Log(n);
                 ganador = GameManager.Instance.player2.GetComponentInChildren<Animator>();
             }
             else if (player == 2)
             {
                 n = 1;
-                Debug.Log(n);
                 ganador = GameManager.Instance.player1.GetComponentInChildren<Animator>();
             }
 
