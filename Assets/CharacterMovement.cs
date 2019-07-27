@@ -17,11 +17,11 @@ public class CharacterMovement : MonoBehaviour
     private int playerNumber = 1;
 
     [SerializeField]
-    private LayerMask layerMask;
+    private LayerMask platformLayer;
 
     [Range(1, 10)]
     [SerializeField]
-    private float speed = 1;
+    private float speed = 1, fallMultiplier = 2.5f, lowJumpMultiplier = 2;
 
     [Range(0,1)]
     [SerializeField]
@@ -29,7 +29,7 @@ public class CharacterMovement : MonoBehaviour
 
     [Range(1, 100)]
     [SerializeField]
-    private float forceMultiplier = 1;
+    private float forceMultiplier = 1, jumpForce = 5;
     #endregion
 
     #region Input and Unity components
@@ -57,6 +57,7 @@ public class CharacterMovement : MonoBehaviour
     {
         Raycast();
         horizontalAxis = Input.GetAxis("Horizontal" + playerNumber);
+        Debug.Log(GetGrounded());
     }
 
     private void FixedUpdate()
@@ -71,7 +72,6 @@ public class CharacterMovement : MonoBehaviour
     private void HorizontalMovement()
     {
         _horizontalMovement.x = speed * horizontalAxis;
-        Debug.Log(GetGrounded());
         if (rb.velocity.x < speed)
             rb.AddForce(_horizontalMovement * forceMultiplier);
     }
@@ -80,7 +80,16 @@ public class CharacterMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump" + playerNumber) && GetGrounded())
         {
-            rb.AddForce(Vector2.up * forceMultiplier * 2, ForceMode2D.Impulse);
+            //rb.AddForce(Vector2.up * forceMultiplier, ForceMode2D.Impulse);
+            rb.velocity = Vector2.up * jumpForce;
+        }
+        if(rb.velocity.y < 0 && !GetGrounded())
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1);
+        }
+        else if(rb.velocity.y < 0 && !GetGrounded() && !Input.GetButton("Jump"))
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity * (lowJumpMultiplier - 1);
         }
     }
     #endregion
@@ -99,8 +108,8 @@ public class CharacterMovement : MonoBehaviour
 
     private bool GetGrounded()
     {
-        return Physics2D.Raycast(_raycastOriginLeft, Vector2.down, raycastDistance, layerMask) ||
-            Physics2D.Raycast(_raycastOriginRight, Vector2.down, raycastDistance, layerMask);
+        return Physics2D.Raycast(_raycastOriginLeft, Vector2.down, raycastDistance, platformLayer) ||
+            Physics2D.Raycast(_raycastOriginRight, Vector2.down, raycastDistance, platformLayer);
     }
     #endregion
 
