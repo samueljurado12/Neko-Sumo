@@ -1,6 +1,6 @@
 ﻿/*
  * Author: Samuel Jurado Quintana
- * Co-Authors: Enrique Botella Garcés
+ * Co-Authors: Enrique Botella Garcés, Jesús Garcés Villarrubia
  * Date: 26/07/2019
  */
 
@@ -39,12 +39,14 @@ public class CharacterMovement : MonoBehaviour
 
     #region Private variables
     private Vector2 _horizontalMovement, _raycastOriginLeft, _raycastOriginRight;
+    private bool jumpRequest;
     #endregion
 
     #region Unity methods
     // Start is called before the first frame update
     void Start()
     {
+        jumpRequest = false;
         horizontalAxis = 0;
         _horizontalMovement = new Vector2();
         _raycastOriginLeft = new Vector2(transform.position.x - 0.25f, transform.position.y - 0.5f);
@@ -57,6 +59,7 @@ public class CharacterMovement : MonoBehaviour
     {
         Raycast();
         horizontalAxis = Input.GetAxis("Horizontal" + playerNumber);
+        jumpRequest = Input.GetButtonDown("Jump" + playerNumber);
         Debug.Log(GetGrounded());
     }
 
@@ -64,6 +67,10 @@ public class CharacterMovement : MonoBehaviour
     {
         Jump();
         HorizontalMovement();
+        if (!GetGrounded())
+        {
+            Fall();
+        }
     }
     #endregion
 
@@ -78,19 +85,24 @@ public class CharacterMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump" + playerNumber) && GetGrounded())
+        if (jumpRequest && GetGrounded())
         {
-            //rb.AddForce(Vector2.up * forceMultiplier, ForceMode2D.Impulse);
-            rb.velocity = Vector2.up * jumpForce;
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            jumpRequest = false;
         }
-        if(rb.velocity.y < 0 && !GetGrounded())
+    }
+
+    private void Fall()
+    {
+        if (rb.velocity.y < 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * Time.deltaTime * (fallMultiplier - 1);
         }
-        else if(rb.velocity.y < 0 && !GetGrounded() && !Input.GetButton("Jump"))
+        else if (rb.velocity.y > 0 && !Input.GetButton("Jump" + playerNumber))
         {
             rb.velocity += Vector2.up * Physics2D.gravity * Time.deltaTime * (lowJumpMultiplier - 1);
         }
+        
     }
     #endregion
 
