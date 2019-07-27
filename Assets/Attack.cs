@@ -21,7 +21,6 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetButtonDown("Melee" + cm.PlayerNumber))
         {
-            Debug.Log("Melee");
             animator.SetTrigger("Attack");
             col.enabled = true;
         }else
@@ -31,8 +30,7 @@ public class Attack : MonoBehaviour
 
         if (Input.GetButtonDown("Dash" + cm.PlayerNumber))
         {
-            rb.AddForce(transform.right * rb.mass * 1000);
-            Debug.Log("Dash");
+            rb.AddForce(transform.right * transform.localScale.x * rb.mass * 1000);
             animator.SetTrigger("Dash");
         }
     }
