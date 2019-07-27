@@ -455,7 +455,7 @@ MonoBehaviour:
   m_text: "Samuel Jurado Quintana - Design, Programador - @SJuradoQ\n\nEster Garc\xE9s
     Villarrubia - Dise\xF1o, Arte 2D\n\nAlejandro Aranda Toledo - Dise\xF1o, (Arte)\n\nJes\xFAs
     Garc\xE9s Villarrubia - Programador\n\nEnrique Botella Garc\xE9s - Dise\xF1o,
-    Arte 2D"
+    Arte 2D\n\nNemo Scio - M\xFAsica"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -524,12 +524,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1407813740}
-    characterCount: 224
+    characterCount: 244
     spriteCount: 0
-    spaceCount: 36
-    wordCount: 33
+    spaceCount: 41
+    wordCount: 37
     linkCount: 0
-    lineCount: 9
+    lineCount: 11
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
