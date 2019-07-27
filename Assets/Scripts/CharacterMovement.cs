@@ -26,7 +26,7 @@ public class CharacterMovement : MonoBehaviour
     private LayerMask platformLayer;
 
     [SerializeField]
-    private GameObject tail, belt;
+    private GameObject tail;
 
     [Range(1, 10)]
     [SerializeField]
@@ -56,7 +56,6 @@ public class CharacterMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        belt.GetComponent<Anima2D.SpriteMeshInstance>().color = playerNumber == 1 ? new Color(204, 0, 0) : new Color(0, 116, 204);
         jumpRequest = false;
         horizontalAxis = 0;
         _horizontalMovement = new Vector2();
@@ -110,7 +109,7 @@ public class CharacterMovement : MonoBehaviour
             {
                 transform.localScale = facingRight;
             }
-
+            
         }
         foreach (SpringBone t in tail.GetComponentsInChildren<SpringBone>())
         {
