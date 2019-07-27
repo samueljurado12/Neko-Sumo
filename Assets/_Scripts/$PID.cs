@@ -12,7 +12,6 @@ public class PID {
 		this.dFactor = dFactor;
 	}
 	
-	
 	public float Update(float setpoint, float actual, float timeFrame) {
 		float present = setpoint - actual;
 		integral += present * timeFrame;
