@@ -731,7 +731,7 @@ PrefabInstance:
     - target: {fileID: 6111823574208449846, guid: 38f60c12c84837c4a8a14bb96ec8659f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6111823574208449846, guid: 38f60c12c84837c4a8a14bb96ec8659f,
         type: 3}
@@ -1352,7 +1352,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1239474513
@@ -1367,7 +1367,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1352902703 stripped
 GameObject:
@@ -1442,7 +1442,7 @@ PrefabInstance:
     - target: {fileID: 1538588748255412978, guid: 8a3c2606adef22b44b25a9544ae9183f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1538588748255412978, guid: 8a3c2606adef22b44b25a9544ae9183f,
         type: 3}
@@ -1848,7 +1848,7 @@ RectTransform:
   m_Children:
   - {fileID: 57225264}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
