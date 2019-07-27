@@ -12,9 +12,14 @@ public class CharacterMovement : MonoBehaviour
 {
 
     #region Properties and Editor vars
-    [Range(1, 2)]
     [SerializeField]
-    private int playerNumber = 1;
+    [Range(1, 2)]
+    private int playerNumber;
+
+    public int PlayerNumber
+    {
+        get { return playerNumber; }
+    }
 
     [SerializeField]
     private LayerMask platformLayer;
