@@ -8,12 +8,10 @@ public class Attack : MonoBehaviour
     CharacterMovement cm;
     Rigidbody2D rb;
     [SerializeField]
-    Collider2D col;
-    [SerializeField]
     float cooldownDash = 1, dashPower = 500;
     float timeRemainingDash = 0;
     [SerializeField]
-    float meleePower = 5;
+    float meleePower = 500;
 
     void Start()
     {

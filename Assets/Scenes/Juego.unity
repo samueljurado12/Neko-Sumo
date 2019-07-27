@@ -692,6 +692,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7692402801942232062, guid: 38f60c12c84837c4a8a14bb96ec8659f,
+        type: 3}
+      propertyPath: meleePower
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 2260989677973407277, guid: 38f60c12c84837c4a8a14bb96ec8659f,
         type: 3}
       propertyPath: force
