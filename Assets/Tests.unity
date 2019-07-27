@@ -498,6 +498,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7692402801942232062, guid: 38f60c12c84837c4a8a14bb96ec8659f,
+        type: 3}
+      propertyPath: dashPower
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692402801942232062, guid: 38f60c12c84837c4a8a14bb96ec8659f,
+        type: 3}
+      propertyPath: cooldownDash
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6465634015916372662, guid: 38f60c12c84837c4a8a14bb96ec8659f,
         type: 3}
       propertyPath: m_IsTrigger
@@ -799,6 +809,16 @@ PrefabInstance:
     - target: {fileID: 286128666, guid: 38f60c12c84837c4a8a14bb96ec8659f, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692402801942232062, guid: 38f60c12c84837c4a8a14bb96ec8659f,
+        type: 3}
+      propertyPath: dashPower
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692402801942232062, guid: 38f60c12c84837c4a8a14bb96ec8659f,
+        type: 3}
+      propertyPath: cooldownDash
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6465634015916372662, guid: 38f60c12c84837c4a8a14bb96ec8659f,
         type: 3}

@@ -9,6 +9,9 @@ public class Attack : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField]
     Collider2D col;
+    [SerializeField]
+    public float cooldownDash = 1, dashPower = 500;
+    float timeRemainingDash = 0;
 
     void Start()
     {
@@ -28,10 +31,14 @@ public class Attack : MonoBehaviour
             col.enabled = false;
         }
 
-        if (Input.GetButtonDown("Dash" + cm.PlayerNumber))
+        if (timeRemainingDash > 0)
+            timeRemainingDash -= Time.deltaTime;
+
+        if (Input.GetButtonDown("Dash" + cm.PlayerNumber) && cm.GetGrounded() && timeRemainingDash <= 0)
         {
-            rb.AddForce(transform.right * transform.localScale.x * rb.mass * 1000);
+            rb.AddForce(transform.right * transform.localScale.x * rb.mass * dashPower);
             animator.SetTrigger("Dash");
+            timeRemainingDash = cooldownDash;
         }
     }
 }
