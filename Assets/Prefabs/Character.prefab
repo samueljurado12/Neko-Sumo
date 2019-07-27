@@ -108,7 +108,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 1
@@ -133,9 +133,9 @@ MonoBehaviour:
   platformLayer:
     serializedVersion: 2
     m_Bits: 1024
-  speed: 5
+  speed: 6
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   raycastDistance: 0.6
-  forceMultiplier: 10
-  jumpForce: 5
+  forceMultiplier: 5
+  jumpForce: 7
