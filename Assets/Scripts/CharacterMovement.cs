@@ -89,6 +89,12 @@ public class CharacterMovement : MonoBehaviour
             Fall();
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<Furball>() || collision.gameObject.GetComponent<Bird>())
+            animator.SetTrigger("Damage");
+    }
     #endregion
 
     #region Movement methods
@@ -130,10 +136,12 @@ public class CharacterMovement : MonoBehaviour
 
     private void Jump()
     {
+        Debug.Log(GetGrounded());
         if (jumpRequest && GetGrounded())
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jumpRequest = false;
+            animator.SetTrigger("Jump");
         }
     }
 

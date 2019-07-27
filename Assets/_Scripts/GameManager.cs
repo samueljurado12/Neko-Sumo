@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { private set; get; }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public CharacterMovement player1, player2;
+
     void Start()
     {
         

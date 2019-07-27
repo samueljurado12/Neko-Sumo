@@ -33,7 +33,7 @@ public class WinScreen : MonoBehaviour
         if (ScenesManager.Instance.IsJoystickConnected())
             firstButton.Select();
 
-        label.text = "Gana Jugador " + player;
+        label.text = "GANA EL JUGADOR " + player;
 
     }
 
@@ -45,7 +45,7 @@ public class WinScreen : MonoBehaviour
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        ScenesManager.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void LoadMainMenu()
