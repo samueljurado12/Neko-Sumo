@@ -7,7 +7,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[SelectionBase]
 public class CharacterMovement : MonoBehaviour
 {
 
@@ -61,7 +61,7 @@ public class CharacterMovement : MonoBehaviour
         horizontalAxis = Input.GetAxis("Horizontal" + playerNumber);
 
         jumpRequest = Input.GetButtonDown("Jump" + playerNumber);
-        Debug.Log(GetGrounded());
+
     }
 
     private void FixedUpdate()
