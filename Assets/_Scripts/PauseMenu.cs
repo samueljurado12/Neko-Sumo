@@ -67,13 +67,13 @@ public class PauseMenu : MonoBehaviour
     public void Hide()
     {
         transform.DOScaleY(0, 0.1f);
-        Time.timeScale = 1;
     }
 
     public void ContinueButton()
     {
         Hide();
         visible = false;
+        Time.timeScale = 1;
     }
 
     public void InstructionsButtons()

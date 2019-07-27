@@ -9,6 +9,8 @@ public class Attack : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField]
     Collider2D col;
+    [SerializeField]
+    float dashPower = 1000;
 
     void Start()
     {
@@ -30,7 +32,7 @@ public class Attack : MonoBehaviour
 
         if (Input.GetButtonDown("Dash" + cm.PlayerNumber))
         {
-            rb.AddForce(transform.right * transform.localScale.x * rb.mass * 1000);
+            rb.AddForce(transform.right * transform.localScale.x * rb.mass * dashPower);
             animator.SetTrigger("Dash");
         }
     }
