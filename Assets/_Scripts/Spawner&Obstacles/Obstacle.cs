@@ -1,11 +1,17 @@
-﻿using System.Collections;
+﻿/*
+ * Author: Samuel Jurado Quintana
+ * Co-Authors: 
+ * 
+ * Date: 27/07/2019
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public abstract class Obstacle : MonoBehaviour
 {
-
+    [Header("Base attributes")]
     [SerializeField]
     [Range(1, 6)]
     protected float speed = 3;
