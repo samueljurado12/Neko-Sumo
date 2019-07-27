@@ -143,10 +143,6 @@ public class CharacterMovement : MonoBehaviour
             jumpRequest = false;
             animator.SetTrigger("Jump");
         }
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") && GetGrounded())
-        {
-            animator.Rebind();
-        }
     }
 
     private void Fall()
@@ -159,7 +155,7 @@ public class CharacterMovement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity * Time.deltaTime * (lowJumpMultiplier - 1);
         }
-        Debug.Log(animator.GetCurrentAnimatorStateInfo(0).IsName("Jump"));
+        //animator.GetCurrentAnimatorStateInfo(0).IsName("Jump");
 
     }
     #endregion
