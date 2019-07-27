@@ -401,11 +401,41 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 247260802904758600, guid: 24e5655153b287344b700e14d53f2c27,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 247260802904758600, guid: 24e5655153b287344b700e14d53f2c27,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 247260802904758600, guid: 24e5655153b287344b700e14d53f2c27,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 247260802904758600, guid: 24e5655153b287344b700e14d53f2c27,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 247260802904758600, guid: 24e5655153b287344b700e14d53f2c27,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 247260802904758606, guid: 24e5655153b287344b700e14d53f2c27,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 247260802904758606, guid: 24e5655153b287344b700e14d53f2c27,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 247260801493049597, guid: 24e5655153b287344b700e14d53f2c27,
         type: 3}
       propertyPath: m_Mesh
