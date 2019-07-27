@@ -6,22 +6,18 @@ public class Fish : Obstacle
 {
 
     [Header("Fish Attributes")]
-    [SerializeField] private float minSize, maxSize;
+
+    [SerializeField] private float rotationOffset;
+    [SerializeField] private Transform followObject;
 
     protected override void Behaviour()
     {
-        throw new System.NotImplementedException();
+        transform.localEulerAngles = new Vector3(0, 0, Random.Range(90 - rotationOffset, 90 + rotationOffset));
+        rb.velocity =  (followObject.position - transform.position) * speed;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void FixedUpdate()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        rb.velocity -= Vector2.down * Physics2D.gravity * Time.deltaTime;
     }
 }

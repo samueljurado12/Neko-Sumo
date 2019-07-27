@@ -43,5 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4c4a467fde709499443b6e8deedc2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 0}
+  obstacle: {fileID: 1736015883704433968, guid: e0995e6b4cbebc342a84b0255382f25c,
+    type: 3}
   size: 11

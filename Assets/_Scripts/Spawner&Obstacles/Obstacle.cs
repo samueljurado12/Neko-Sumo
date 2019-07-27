@@ -13,7 +13,7 @@ public abstract class Obstacle : MonoBehaviour
 {
     [Header("Base attributes")]
     [SerializeField]
-    [Range(1, 6)]
+    [Range(1, 20)]
     protected float speed = 3;
 
     [SerializeField]
