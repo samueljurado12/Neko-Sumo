@@ -6,6 +6,13 @@ using System.Linq;
 
 public class PlatformManager : MonoBehaviour
 {
+    public static PlatformManager Instance { private set; get; }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     new Rigidbody2D rigidbody;
 
     [SerializeField]

@@ -36,7 +36,7 @@ public class BallLauncher : MonoBehaviour
         Furball ball = ((GameObject)Instantiate(ballPrefab)).GetComponent<Furball>();
         ball.transform.parent = ballHolder.transform;
         ball.transform.localPosition = Vector3.zero;
-        Vector3 force = Vector2.left * transform.localScale.x * launchForce;
+        Vector3 force = Vector2.right * transform.parent.localScale.x * launchForce;
         ball.rigidbody.AddForce(force, ForceMode2D.Impulse);
         ball.transform.parent = null;
     }
