@@ -1,21 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlatformStabilizer : MonoBehaviour
 {
-    public PID pid;
-    Rigidbody2D rigidbody;
+    new Rigidbody2D rigidbody;
 
-    // Start is called before the first frame update
+    [SerializeField]
+    CharacterMovement[] players;
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        if (players == null || players.Length == 0)
+            players = FindObjectsOfType<CharacterMovement>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        rigidbody.AddTorque(pid.Update(0, transform.localRotation.z, Time.deltaTime));
+    }
+
+    [SerializeField]
+    float returnTime = 3;
+    Tweener tweener;
+
+    private void Update()
+    {
+        if (!players[0].GetGrounded() && !players[1].GetGrounded())
+        {
+            tweener = rigidbody.DORotate(0, returnTime);
+        }
+        else
+        {
+            tweener.Kill();
+        }
     }
 }

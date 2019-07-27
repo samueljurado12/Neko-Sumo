@@ -57,7 +57,7 @@ public class CharacterMovement : MonoBehaviour
     {
         Raycast();
         horizontalAxis = Input.GetAxis("Horizontal" + playerNumber);
-        Debug.Log(GetGrounded());
+        //Debug.Log(GetGrounded());
     }
 
     private void FixedUpdate()
@@ -106,7 +106,7 @@ public class CharacterMovement : MonoBehaviour
         Debug.DrawRay(_raycastOriginRight, Vector2.down * raycastDistance, Color.yellow);
     }
 
-    private bool GetGrounded()
+    public bool GetGrounded()
     {
         return Physics2D.Raycast(_raycastOriginLeft, Vector2.down, raycastDistance, platformLayer) ||
             Physics2D.Raycast(_raycastOriginRight, Vector2.down, raycastDistance, platformLayer);
