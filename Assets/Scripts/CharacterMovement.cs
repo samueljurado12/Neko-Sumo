@@ -13,9 +13,14 @@ public class CharacterMovement : MonoBehaviour
 {
 
     #region Properties and Editor vars
-    [Range(1, 2)]
     [SerializeField]
-    private int playerNumber = 1;
+    [Range(1, 2)]
+    private int playerNumber;
+
+    public int PlayerNumber
+    {
+        get { return playerNumber; }
+    }
 
     [SerializeField]
     private LayerMask platformLayer;
@@ -27,7 +32,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private float speed = 1, fallMultiplier = 2.5f, lowJumpMultiplier = 2;
 
-    [Range(0, 1)]
+    [Range(0, 2)]
     [SerializeField]
     private float raycastDistance = 1;
 
