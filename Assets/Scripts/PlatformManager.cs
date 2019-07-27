@@ -6,6 +6,13 @@ using System.Linq;
 
 public class PlatformManager : MonoBehaviour
 {
+    public static PlatformManager Instance { private set; get; }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     new Rigidbody2D rigidbody;
 
     [SerializeField]
@@ -25,7 +32,7 @@ public class PlatformManager : MonoBehaviour
     private void Update()
     {
         
-        if (players.FindAll(o => !o.GetGrounded()).Count == 1)
+        /*if (players.FindAll(o => !o.GetGrounded()).Count == 1)
         {
             Debug.Log("Un jugador ha caído");
         }
