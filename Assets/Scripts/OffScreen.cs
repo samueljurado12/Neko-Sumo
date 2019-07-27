@@ -29,6 +29,7 @@ public class OffScreen : MonoBehaviour
             {
                 ganador.SetTrigger("Winner");
                 ganador.GetComponentInParent<Rigidbody2D>().simulated = false;
+                PlatformManager.Instance.GetComponent<Rigidbody2D>().simulated = false;
                 Vector3 target = ganador.transform.position;
                 target.z = Camera.main.transform.position.z;
                 Camera.main.transform.DOMove(target, 1);
