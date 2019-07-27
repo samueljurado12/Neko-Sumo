@@ -11,11 +11,7 @@ public class MeleeCollider : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            float dir = transform.position.x - collision.transform.position.x;
-            if (dir > 0)
-                dir = 1;
-            else
-                dir = -1;
+            float dir = transform.parent.localScale.x;
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * dir * force);
         }
     }
