@@ -50,6 +50,7 @@ public class CharacterMovement : MonoBehaviour
     private Vector2 _horizontalMovement, _raycastOriginLeft, _raycastOriginRight;
     private bool jumpRequest;
     private Vector3 facingLeft, facingRight;
+    private Animator animator;
     #endregion
 
     #region Unity methods
@@ -65,6 +66,7 @@ public class CharacterMovement : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         facingRight = Vector3.one;
         facingLeft = new Vector3(-1, 1, 1);
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -94,7 +96,7 @@ public class CharacterMovement : MonoBehaviour
     private void HorizontalMovement()
     {
         _horizontalMovement.x = speed * horizontalAxis;
-        if (rb.velocity.x < speed)
+        if (Mathf.Abs(rb.velocity.x) < speed)
             rb.AddForce(_horizontalMovement * forceMultiplier);
     }
 
@@ -110,7 +112,11 @@ public class CharacterMovement : MonoBehaviour
             {
                 transform.localScale = facingRight;
             }
-
+            animator.SetBool("Running", true);
+        }
+        else
+        {
+            animator.SetBool("Running", false);
         }
         foreach (SpringBone t in tail.GetComponentsInChildren<SpringBone>())
         {
