@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6111823574208449845}
   - component: {fileID: 6111823574208449850}
   - component: {fileID: 6111823574208449841}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 4
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 1
@@ -130,5 +130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 1
+  platformLayer:
+    serializedVersion: 2
+    m_Bits: 1024
   speed: 5
-  forceMultiplier: 15
+  raycastDistance: 0.6
+  forceMultiplier: 10
