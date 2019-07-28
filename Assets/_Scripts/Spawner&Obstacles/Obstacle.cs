@@ -17,7 +17,7 @@ public abstract class Obstacle : MonoBehaviour
     protected float speed = 3;
 
     [SerializeField]
-    [Range(1, 3)]
+    [Range(0.1f, 3)]
     protected float hitForce = 3;
     [SerializeField] protected bool movesRight = true;
     public bool MovesRight { get { return movesRight; } set { movesRight = value; } }
