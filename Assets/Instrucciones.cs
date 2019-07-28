@@ -25,7 +25,10 @@ public class Instrucciones : MonoBehaviour
 
     public void Hide()
     {
-        PauseMenu.Instance.Show();
-        transform.localScale = Vector3.zero;
+            PauseMenu.Instance.Show();
+            FindObjectOfType<MainMenuScript>().FocusButton();
+            transform.localScale = Vector3.zero;
+
+            
     }
 }
