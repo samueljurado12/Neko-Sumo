@@ -14,15 +14,18 @@ public class Instrucciones : MonoBehaviour
     {
         Instance = this;
         transform.localScale = Vector3.zero;
+        
     }
 
     public void Show()
     {
         transform.localScale = Vector3.one;
+        firstButton.Select();
     }
 
     public void Hide()
     {
+        PauseMenu.Instance.Show();
         transform.localScale = Vector3.zero;
     }
 }
