@@ -43,7 +43,7 @@ public class WinScreen : MonoBehaviour
         if (playerNumber == 2)
             label.text = "GANA EL JUGADOR AZUL";
 
-        belt.color = playerNumber == 1 ? new Color(204, 0, 0) : new Color(0, 116, 204);
+        belt.color = playerNumber == 1 ? new Color(149, 27, 27) : new Color(42, 109, 161);
 
     }
 
