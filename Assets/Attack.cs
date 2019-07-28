@@ -8,10 +8,10 @@ public class Attack : MonoBehaviour
     CharacterMovement cm;
     Rigidbody2D rb;
     [SerializeField]
-    Collider2D col;
-    [SerializeField]
-    public float cooldownDash = 1, dashPower = 500;
+    float cooldownDash = 1, dashPower = 500;
     float timeRemainingDash = 0;
+    [SerializeField]
+    float meleePower = 500;
 
     void Start()
     {
@@ -25,10 +25,20 @@ public class Attack : MonoBehaviour
         if (Input.GetButtonDown("Melee" + cm.PlayerNumber))
         {
             animator.SetTrigger("Attack");
-            col.enabled = true;
-        }else
-        {
-            col.enabled = false;
+
+            Vector3 origin = transform.position + transform.right * transform.localScale.x;
+            Vector3 dir = Vector3.right * transform.localScale.x;
+            Debug.DrawRay(origin, dir);
+            RaycastHit2D hit = Physics2D.Raycast(origin, dir, 1);
+
+            // If it hits something...
+            if (hit.collider != null)
+            {
+                Debug.Log(hit.collider.name);
+                Vector3 force = dir * meleePower;
+                hit.collider.GetComponent<Rigidbody2D>().AddForce(force);
+            }
+
         }
 
         if (timeRemainingDash > 0)
