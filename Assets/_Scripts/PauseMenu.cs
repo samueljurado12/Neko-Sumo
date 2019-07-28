@@ -89,7 +89,7 @@ public class PauseMenu : MonoBehaviour
 
     public void InstructionsButtons()
     {
-        
+        Instrucciones.Instance.Show();
     }
 
     public void MenuButton()

@@ -27,8 +27,16 @@ public class GameManager : MonoBehaviour
 
         if (Vector2.Distance(player1.transform.position, player2.transform.position) < 2)
         {
-            player1.AddForce(-10);
-            player2.AddForce(-10);
+            if(player1.transform.localScale.x > 0)
+            {
+                player1.AddForce(10);
+                player2.AddForce(-10);
+            }
+            if(player1.transform.localScale.x < 0)
+            {
+                player1.AddForce(-10);
+                player2.AddForce(10);
+            }
         }
     }
 
