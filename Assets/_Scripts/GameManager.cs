@@ -25,4 +25,26 @@ public class GameManager : MonoBehaviour
             PauseMenu.Instance.SwitchMenu();
         }
     }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        /*
+        player1.PauseCat();
+        player2.PauseCat();
+        player1.enabled = false;
+        player2.enabled = false;
+        PlatformManager.Instance.GetComponent<Rigidbody2D>().simulated = false;*/
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        /*
+        player1.ResumeCat();
+        player2.ResumeCat();
+        player1.enabled = true;
+        player2.enabled = true;
+        PlatformManager.Instance.GetComponent<Rigidbody2D>().simulated = true;*/
+    }
 }

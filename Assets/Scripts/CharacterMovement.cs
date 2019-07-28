@@ -143,7 +143,7 @@ public class CharacterMovement : MonoBehaviour
             jumpRequest = false;
             animator.SetTrigger("Jump");
         }
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") && GetGrounded())
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") && GetGrounded())
         {
             animator.Rebind();
         }
@@ -159,7 +159,6 @@ public class CharacterMovement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity * Time.deltaTime * (lowJumpMultiplier - 1);
         }
-        Debug.Log(animator.GetCurrentAnimatorStateInfo(0).IsName("Jump"));
 
     }
     #endregion
@@ -180,6 +179,18 @@ public class CharacterMovement : MonoBehaviour
     {
         return Physics2D.Raycast(_raycastOriginLeft, Vector2.down, raycastDistance, platformLayer) ||
             Physics2D.Raycast(_raycastOriginRight, Vector2.down, raycastDistance, platformLayer);
+    }
+
+    public void PauseCat()
+    {
+        animator.StopPlayback();
+        rb.simulated = false;
+    }
+
+    public void ResumeCat()
+    {
+        animator.StartPlayback();
+        rb.simulated = true;
     }
     #endregion
 

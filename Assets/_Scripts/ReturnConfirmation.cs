@@ -24,19 +24,22 @@ public class ReturnConfirmation : MonoBehaviour
 
     public void Show()
     {
-        transform.DOScale(1, 0.25f);
+        //transform.DOScale(1, 0.25f);
+        transform.localScale = Vector3.one;
         if (ScenesManager.Instance.IsJoystickConnected())
             firstButton.Select();
     }
 
     public void Hide()
     {
-        transform.DOScaleY(0, 0.25f);
+        transform.localScale = Vector3.zero;
+        //transform.DOScaleY(0, 0.25f);
         PauseMenu.Instance.Show();
     }
 
     public void LoadMainMenu()
     {
+        GameManager.Instance.Resume();
         ScenesManager.Instance.LoadScene(0);
     }
 }

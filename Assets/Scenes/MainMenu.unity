@@ -699,7 +699,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Salir
+  m_text: SALIR
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cee1c5311b03ff84785018542c48b650, type: 2}
   m_sharedMaterial: {fileID: -6476142411863724218, guid: cee1c5311b03ff84785018542c48b650,
@@ -857,7 +857,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Cr\xE9ditos"
+  m_text: "CR\xC9DITOS"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cee1c5311b03ff84785018542c48b650, type: 2}
   m_sharedMaterial: {fileID: -6476142411863724218, guid: cee1c5311b03ff84785018542c48b650,
@@ -1244,7 +1244,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Iniciar Partida
+  m_text: INICIAR PARTIDA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cee1c5311b03ff84785018542c48b650, type: 2}
   m_sharedMaterial: {fileID: -6476142411863724218, guid: cee1c5311b03ff84785018542c48b650,

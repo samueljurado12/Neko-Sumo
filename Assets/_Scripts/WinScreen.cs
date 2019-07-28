@@ -33,7 +33,8 @@ public class WinScreen : MonoBehaviour
 
     public void Show(int playerNumber)
     {
-        transform.DOScale(1, 0.25f);
+        transform.localScale = Vector3.one;
+        //transform.DOScale(1, 0.25f);
         if (ScenesManager.Instance.IsJoystickConnected())
             firstButton.Select();
 
@@ -45,6 +46,7 @@ public class WinScreen : MonoBehaviour
 
     public void Hide()
     {
+        transform.localScale = Vector3.zero;
         transform.DOScaleY(0, 0.25f);
         //Reiniciar partida
     }

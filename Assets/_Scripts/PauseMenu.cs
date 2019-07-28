@@ -50,7 +50,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Show()
     {
-        transform.DOScaleY(1, 0.1f).OnComplete(() => FocusButton());
+        //transform.DOScaleY(1, 0.1f).OnComplete(() => FocusButton());
+        transform.localScale = Vector3.one;
+        FocusButton();
+        GameManager.Instance.Pause();
         visible = true;
     }
 
@@ -59,21 +62,29 @@ public class PauseMenu : MonoBehaviour
         if (ScenesManager.Instance.IsJoystickConnected())
         {
             GetComponentInChildren<Button>().Select();
-            Time.timeScale = 0;
-        }
             
+        }
+
     }
 
     public void Hide()
     {
-        transform.DOScaleY(0, 0.1f);
+        //transform.DOScaleY(0, 0.1f);
+        transform.localScale = Vector3.zero;
     }
 
     public void ContinueButton()
     {
         Hide();
         visible = false;
-        Time.timeScale = 1;
+        StartCoroutine(Cor());
+
+    }
+
+    IEnumerator Cor()
+    {
+        yield return new WaitForSecondsRealtime(0.01f);
+        GameManager.Instance.Resume();
     }
 
     public void InstructionsButtons()
