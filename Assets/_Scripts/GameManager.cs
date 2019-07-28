@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
         {
             PauseMenu.Instance.SwitchMenu();
         }
-
+        /*
         if (Vector2.Distance(player1.transform.position, player2.transform.position) < 2)
         {
             if(player1.transform.localScale.x > 0)
@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
                 player2.AddForce(10);
             }
         }
+        */
     }
 
     public void Pause()
