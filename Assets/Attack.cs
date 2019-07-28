@@ -36,7 +36,7 @@ public class Attack : MonoBehaviour
             {
                 Debug.Log(hit.collider.name);
                 Vector3 force = dir * meleePower;
-                hit.collider.GetComponent<Rigidbody2D>().AddForce(force);
+                hit.collider.GetComponent<Rigidbody2D>().AddForce(force, ForceMode2D.Impulse);
                 hit.collider.GetComponentInChildren<Animator>().SetTrigger("Damage");
             }
 
@@ -47,10 +47,13 @@ public class Attack : MonoBehaviour
 
         if (Input.GetButtonDown("Dash" + cm.PlayerNumber) && cm.GetGrounded() && timeRemainingDash <= 0)
         {
-            rb.AddForce(transform.right * transform.localScale.x * rb.mass * dashPower);
             animator.SetTrigger("Dash");
             timeRemainingDash = cooldownDash;
-
         }
+    }
+
+    public void Dash()
+    {
+        rb.AddForce(transform.right * transform.localScale.x * rb.mass * dashPower, ForceMode2D.Impulse);
     }
 }

@@ -41,4 +41,9 @@ public class BallLauncher : MonoBehaviour
         ball.transform.parent = null;
     }
 
+    public void Dash()
+    {
+        transform.parent.GetComponent<Attack>().Dash();
+    }
+
 }

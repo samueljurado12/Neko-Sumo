@@ -33,6 +33,8 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private float speed = 1, fallMultiplier = 2.5f, lowJumpMultiplier = 2;
 
+    public float Speed { get { return speed; } set { speed = value; } }
+
     [Range(0, 2)]
     [SerializeField]
     private float raycastDistance = 1;

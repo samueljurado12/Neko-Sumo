@@ -17,12 +17,12 @@ public class Furball : MonoBehaviour
     int counter = 0;
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        counter++;
-        if (counter == 2)
-        {
+        //counter++;
+        //if (counter == 2)
+        //{
             spriteRenderer.DOFade(0, 0.25f);
             transform.DOScale(0.5f, 0.5f).OnComplete(() => Destroy(gameObject));
-        }
+        //}
         
     }
 }
