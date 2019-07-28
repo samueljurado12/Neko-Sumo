@@ -29,6 +29,7 @@ public class OffScreen : MonoBehaviour
             PlatformManager.Instance.GetComponent<Rigidbody2D>().simulated = false;
 
             ganador.SetTrigger("Winner");
+            
 
             cameraTarget = ganador.transform;
             Camera.main.DOOrthoSize(2, 1);
@@ -61,6 +62,8 @@ public class OffScreen : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         WinScreen.Instance.Show(n);
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.victory);
+        GameObject.Find("Music").GetComponent<AudioSource>().Stop();
         //ScenesManager.Instance.LoadScene(4);
     }
 }
