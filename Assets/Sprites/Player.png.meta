@@ -35,6 +35,12 @@ TextureImporter:
   - first:
       213: 2055175841038174383
     second: Face4
+  - first:
+      213: -2596651534995159561
+    second: Bigote1
+  - first:
+      213: 4918821519205243403
+    second: Bigote2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -347,6 +353,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Bigote1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 128
+        width: 43
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5116279, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44ffbe31e294ff4294b1d155ddeef8c
+      internalID: -2596651534995159561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bigote2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 128
+        width: 44
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9841582039e78f489db660761fcc240
+      internalID: 4918821519205243403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -360,6 +408,6 @@ TextureImporter:
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 636998211035658798
+  userData: 636999000696593075
   assetBundleName: 
   assetBundleVariant: 

@@ -1,0 +1,688 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2257347421586348768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e715ea371f114f4a8d2584ad476634d, type: 3}
+  m_Name: Bigote2_Data
+  m_EditorClassIdentifier: 
+  m_PivotPoint: {x: 90, y: 138}
+  m_Vertices:
+  - {x: 95, y: 143}
+  - {x: 73, y: 143}
+  - {x: 73, y: 138}
+  - {x: 89, y: 138}
+  - {x: 90, y: 137}
+  - {x: 94, y: 136}
+  - {x: 99, y: 135}
+  - {x: 102, y: 133}
+  - {x: 107, y: 133}
+  - {x: 107, y: 136}
+  - {x: 106, y: 138}
+  - {x: 84, y: 143}
+  - {x: 89.5, y: 143}
+  - {x: 92.193855, y: 140.19386}
+  - {x: 100.5, y: 140.5}
+  - {x: 81, y: 138}
+  - {x: 103.80769, y: 135.65384}
+  - {x: 104.5, y: 133}
+  - {x: 103.25, y: 139.25}
+  - {x: 101.40059, y: 135.35088}
+  - {x: 99.82706, y: 137.72899}
+  - {x: 97.75, y: 141.75}
+  - {x: 89.66142, y: 140.45886}
+  - {x: 85, y: 138}
+  - {x: 86.75, y: 141.5496}
+  - {x: 92.25, y: 143}
+  - {x: 92.31505, y: 137.76021}
+  - {x: 94.7933, y: 138.44594}
+  - {x: 96.69548, y: 136.47739}
+  - {x: 94.450645, y: 140.74321}
+  - {x: 97.4144, y: 139.07536}
+  - {x: 84.43174, y: 140.48634}
+  - {x: 87, y: 139.22017}
+  - {x: 78.5, y: 143}
+  - {x: 77, y: 138}
+  - {x: 75.75, y: 143}
+  - {x: 77.61364, y: 140.54091}
+  - {x: 74.375, y: 140.5}
+  - {x: 81.25, y: 141.25}
+  - {x: 79.65755, y: 139.73788}
+  m_BoneWeights:
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 0
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 0
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 0.99193305
+    weight1: 0.00806696
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 0.99110925
+    weight1: 0.008890755
+    weight2: 0
+    weight3: 0
+    boneIndex0: 0
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 0.98847115
+    weight1: 0.011528849
+    weight2: 0
+    weight3: 0
+    boneIndex0: 0
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 0.5672383
+    weight1: 0.43276176
+    weight2: 0
+    weight3: 0
+    boneIndex0: 0
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 0.897053
+    weight1: 0.10294698
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 0.79538137
+    weight1: 0.20461863
+    weight2: 0
+    weight3: 0
+    boneIndex0: 0
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 0.844265
+    weight1: 0.155735
+    weight2: 0
+    weight3: 0
+    boneIndex0: 1
+    boneIndex1: 0
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 0
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 0
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 0
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 0
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: -0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 0
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 0.9998872
+    weight1: 0.00011274869
+    weight2: 0
+    weight3: 0
+    boneIndex0: 0
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 0
+  - weight0: 1
+    weight1: 0
+    weight2: 0
+    weight3: 0
+    boneIndex0: 0
+    boneIndex1: 1
+    boneIndex2: 0
+    boneIndex3: 0
+  m_Edges:
+  - index1: 1
+    index2: 35
+  - index1: 2
+    index2: 1
+  - index1: 23
+    index2: 3
+  - index1: 3
+    index2: 4
+  - index1: 4
+    index2: 5
+  - index1: 6
+    index2: 5
+  - index1: 6
+    index2: 7
+  - index1: 8
+    index2: 17
+  - index1: 9
+    index2: 8
+  - index1: 10
+    index2: 9
+  - index1: 0
+    index2: 21
+  - index1: 11
+    index2: 12
+  - index1: 12
+    index2: 25
+  - index1: 14
+    index2: 18
+  - index1: 15
+    index2: 34
+  - index1: 17
+    index2: 7
+  - index1: 18
+    index2: 10
+  - index1: 25
+    index2: 0
+  - index1: 21
+    index2: 14
+  - index1: 23
+    index2: 15
+  - index1: 34
+    index2: 2
+  - index1: 33
+    index2: 11
+  - index1: 35
+    index2: 33
+  m_Holes: []
+  m_Indices: 180000000b0000000c0000001b0000001a0000000d0000000b000000180000001f0000002100000026000000270000001a0000000400000003000000130000000700000006000000190000000d0000001600000019000000160000000c000000110000000900000008000000040000001a000000050000001100000007000000100000001000000009000000110000001e000000140000001c0000000a00000009000000100000001300000010000000070000001300000014000000120000001300000012000000100000001e0000001d00000015000000120000000a000000100000002500000023000000240000000e00000012000000140000001d00000000000000150000001400000013000000060000001d00000019000000000000001e000000150000000e0000001f000000200000001700000003000000160000001a0000000b0000001f000000260000000c0000001600000018000000160000002000000018000000200000001f00000018000000050000001a0000001b0000000d000000190000001d000000160000000d0000001a000000050000001b0000001c0000001b0000001d0000001e0000001c0000000600000005000000060000001c000000140000001d0000001b0000000d0000001e0000001c0000001b000000140000001e0000000e0000001f000000170000000f0000002000000003000000170000000300000020000000160000002500000001000000230000002100000027000000240000002300000021000000240000002200000025000000240000000f00000022000000270000000200000025000000220000002500000002000000010000000f000000260000001f00000026000000210000000b00000024000000270000002200000027000000260000000f000000
+  m_BindPoses:
+  - bindPose:
+      e00: 0.66364545
+      e01: 0.063398525
+      e02: 0
+      e03: 0.06724735
+      e10: -0.063398525
+      e11: 0.66364545
+      e12: 0
+      e13: -0.018909933
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.048420526
+    path: Hip/Torso/Chest/Head/Bigote2c1
+    name: Bigote2c1
+    color: {r: 1, g: 0, b: 0, a: 1}
+    zOrder: 0
+  - bindPose:
+      e00: 0.624355
+      e01: -0.23372096
+      e02: 0
+      e03: 0.025208091
+      e10: 0.23372096
+      e11: 0.624355
+      e12: 0
+      e13: -0.0087521225
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    boneLength: 0.096718594
+    path: Hip/Torso/Chest/Head/Bigote2c1/Bigote2c2
+    name: Bigote2c2
+    color: {r: 1, g: 0.75, b: 0, a: 1}
+    zOrder: 0
+  m_Blendshapes: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10c0be6d28fe4d539c4a39822fe301c, type: 3}
+  m_Name: Bigote2
+  m_EditorClassIdentifier: 
+  m_ApiVersion: 4
+  m_Sprite: {fileID: 4918821519205243403, guid: 6a1a941fccd3f7842bb63bfe4c352148,
+    type: 3}
+  m_SharedMesh: {fileID: 7738233957195460575}
+  m_SharedMaterials: []
+--- !u!43 &7738233957195460575
+Mesh:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Bigote2
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 165
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 40
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.11333334, y: 0.033333335, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose:
+  - e00: 0.66364545
+    e01: 0.063398525
+    e02: 0
+    e03: 0.06724735
+    e10: -0.063398525
+    e11: 0.66364545
+    e12: 0
+    e13: -0.018909933
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 0.624355
+    e01: -0.23372096
+    e02: 0
+    e03: 0.025208091
+    e10: 0.23372096
+    e11: 0.624355
+    e12: 0
+    e13: -0.0087521225
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB:
+  - m_Min: {x: -0.007965803, y: -0.018487277, z: 0}
+    m_Max: {x: 0.06282305, y: 0.010396749, z: 0}
+  - m_Min: {x: -0.016276574, y: -0.02277538, z: 0}
+    m_Max: {x: 0.10375903, y: 0.019850412, z: 0}
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 18000b000c001b001a000d000b0018001f002100260027001a000400030013000700060019000d001600190016000c0011000900080004001a0005001100070010001000090011001e0014001c000a00090010001300100007001300140012001300120010001e001d00150012000a0010002500230024000e00120014001d00000015001400130006001d00190000001e0015000e001f0020001700030016001a000b001f0026000c001600180016002000180020001f00180005001a001b000d0019001d0016000d001a0005001b001c001b001d001e001c000600050006001c0014001d001b000d001e001c001b0014001e000e001f0017000f002000030017000300200016002500010023002100270024002300210024002200250024000f00220027000200250022002500020001000f0026001f00260021000b00240027002200270026000f00
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 40
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 1
+      offset: 0
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 2
+      offset: 0
+      format: 0
+      dimension: 4
+    - stream: 2
+      offset: 16
+      format: 10
+      dimension: 4
+    m_DataSize: 3200
+    _typelessdata: 8988083d8988083d000000000000000000000000000080bf0000803f40c6e93000000000000080bf4f1be8bd8988083d000000000000000000000000000080bf0000803f0000000000000000000080bf4f1be8bd00000000000000000000000000000000000080bf0000803f0000000000000000000080bf0e74dabb00000000000000000000000000000000000080bf0000803f6939e43100000000000080bf000000000e74dabb000000000000000000000000000080bf0000803f8d93b53000000000000080bf0e74da3c0e745abc000000000000000000000000000080bf0000803fd5c08b3200000000000080bf8fc2753d0ad7a3bc000000000000000000000000000080bf0000803f2ab1d4b200000000000080bf0ad7a33d898808bd000000000000000000000000000080bf0000803fcbdc73b200000000000080bf4f1be83d898808bd000000000000000000000000000080bf0000803f0000000000000000000080bf4f1be83d0e745abc000000000000000000000000000080bf0000803f3c441cb200000000000080bf0e74da3d00000000000000000000000000000000000080bf0000803fbd4ac6af00000000000080bf0ad723bd8988083d000000000000000000000000000080bf0000803f9a88133200000000000080bf0e745abb8988083d000000000000000000000000000080bf0000803f9e243a3200000000000080bfa4a06f3cdaa06f3c000000000000000000000000000080bf0000803fb7d2c7b200000000000080bf295c8f3d8988883c000000000000000000000000000080bf0000803f12ec4eb000000000000080bf8fc275bd00000000000000000000000000000000000080bf0000803f5ded5f3200000000000080bf6385bc3db52180bc000000000000000000000000000080bf0000803fd88e963100000000000080bf2cf9c53d898808bd000000000000000000000000000080bf0000803f879bc2b100000000000080bf1be8b43d8988083c000000000000000000000000000080bf0000803fd06fe0b000000000000080bff2a79b3d71ad90bc000000000000000000000000000080bf0000803f3657c4b200000000000080bf0e2c863d37d0ecba000000000000000000000000000080bf0000803f3ca8d1b100000000000080bf6da0533dcdcccc3c000000000000000000000000000080bf0000803f50190e3300000000000080bf3aed13bb6349863c000000000000000000000000000080bf0000803f0042923100000000000080bf898808bd00000000000000000000000000000000000080bf0000803fb71e7fb200000000000080bf4b7eb1bc18dbc13c000000000000000000000000000080bf0000803f596139b200000000000080bf8fc2753c8988083d000000000000000000000000000080bf0000803f329094b200000000000080bf71dd7c3c8988d1ba000000000000000000000000000080bf0000803f87460f3100000000000080bf93e3023d55d5423b000000000000000000000000000080bf0000803f764cb23100000000000080bfcdd4363d5c4f26bc000000000000000000000000000080bf0000803fd7f3973200000000000080bf8910f33cdad0953c000000000000000000000000000080bf0000803fb1f22bb000000000000080bf66764a3dabeaea3b000000000000000000000000000080bf0000803fc52ec33200000000000080bff60c18bd9ac9873c000000000000000000000000000080bf0000803fb699c0b000000000000080bf0ad7a3bc6646053c000000000000000000000000000080bf0000803f092b3ab200000000000080bf6a039dbd8988083d000000000000000000000000000080bf0000803f8e8f3eb200000000000080bf4b7eb1bd00000000000000000000000000000000000080bf0000803f64594fb200000000000080bf5c8fc2bd8988083d000000000000000000000000000080bf0000803f485b56b200000000000080bf771da9bd7bc48a3c000000000000000000000000000080bf0000803fd9c837b200000000000080bf5555d5bd8988883c000000000000000000000000000080bf0000803fa6e91cb200000000000080bfefee6ebd4b7eb13c000000000000000000000000000080bf0000803fa0ceb93100000000000080bf7e358dbdc6d23d3c000000000000000000000000000080bf0000803f86528ab200000000000080bf00003e3e00008f3e0000123e00008f3e0000123e00008a3e0000323e00008a3e0000343e0000893e00003c3e0000883e0000463e0000873e00004c3e0000853e0000563e0000853e0000563e0000883e0000543e00008a3e0000283e00008f3e0000333e00008f3e4163383ea1318c3e0000493e00808c3e0000223e00008a3e8a9d4f3e62a7873e0000513e0000853e00804e3e00408b3e1acd4a3ed359873e74a7473e9fba893e0080433e00c08d3ea652333e78758c3e00002a3e00008a3e00802d3eb38c8d3e0080383e00008f3e4ea1383e9dc2893e2b963d3e29728a3e1664413e367a883ebbe63c3e43be8c3e2cd4423e4b138b3e0ddd283e817c8c3e00002e3e5d388b3e00001d3e00008f3e00001a3e00008a3e0080173e00008f3e2f3a1b3e798a8c3e00c0143e00808c3e0080223e00408d3eaa501f3ee6bc8b3e0000803f000000000000000000000000010000000000000000000000000000000000803f000000800000000000000000000000000100000000000000000000000000803f0000000000000000000000000000000001000000000000000000000053ef7d3f482b043c0000000000000000010000000000000000000000000000000000803f000000000000000000000000010000000000000000000000000000000000803f000000800000000000000000010000000000000000000000000000000000803f000000800000000000000000010000000000000000000000000000000000803f000000800000000000000000010000000000000000000000000000000000803f000000000000000000000000010000000000000000000000000000000000803f000000000000000000000000010000000000000000000000000000000000803f0000000000000000000000000100000000000000000000000000000056b97d3f87aa113c0000000000000000000000000100000000000000000000000000803f000000000000000000000000010000000000000000000000000000000000803f000000800000000000000000010000000000000000000000000000000000803f00000000000000000000000001000000000000000000000000000000720c7d3f7fe33c3c0000000000000000000000000100000000000000000000000000803f000000800000000000000000010000000000000000000000000000000000803f000000800000000000000000010000000000000000000000000000000000803f000000800000000000000000010000000000000000000000000000000000803f000000800000000000000000010000000000000000000000000000000000803f000000800000000000000000010000000000000000000000000000000000803f000000000000000000000000010000000000000000000000000000000000803f000000000000000000000000010000000000000000000000000000008736113ff392dd3e00000000000000000000000001000000000000000000000044a5653fded5d23d0000000000000000010000000000000000000000000000000000803f000000000000000000000000010000000000000000000000000000000000803f000000000000000000000000010000000000000000000000000000000000803f000000800000000000000000010000000000000000000000000000000000803f000000800000000000000000010000000000000000000000000000000000803f000000800000000000000000010000000000000000000000000000000000803f000000800000000000000000010000000000000000000000000000001d9e4b3f8c87513e000000000000000000000000010000000000000000000000c021583fff781f3e0000000000000000010000000000000000000000000000000000803f000000000000000000000000000000000100000000000000000000000000803f000000800000000000000000000000000100000000000000000000000000803f000000800000000000000000000000000100000000000000000000000000803f000000800000000000000000000000000100000000000000000000000000803f000000800000000000000000000000000100000000000000000000009cf87f3f7e73ec380000000000000000000000000100000000000000000000000000803f00000000000000000000000000000000010000000000000000000000
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.11333334, y: 0.033333335, z: 0}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
