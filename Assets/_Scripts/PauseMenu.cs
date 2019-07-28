@@ -10,17 +10,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     Button firstButton;
 
-    static PauseMenu _instance;
-    public static PauseMenu Instance { private set { _instance = value; }
-        get
-        {
-            if (_instance == null)
-            {
-                GameObject instance = Instantiate((GameObject)Resources.Load("PauseMenu"));
-            }
-            return _instance;
-        }
-    }
+    public static PauseMenu Instance { private set; get; }
 
     private void Awake()
     {
@@ -53,7 +43,8 @@ public class PauseMenu : MonoBehaviour
         //transform.DOScaleY(1, 0.1f).OnComplete(() => FocusButton());
         transform.localScale = Vector3.one;
         FocusButton();
-        GameManager.Instance.Pause();
+        if (GameManager.Instance != null)
+            GameManager.Instance.Pause();
         visible = true;
     }
 
@@ -89,7 +80,8 @@ public class PauseMenu : MonoBehaviour
 
     public void InstructionsButtons()
     {
-        
+        Instrucciones.Instance.Show();
+        Hide();
     }
 
     public void MenuButton()
