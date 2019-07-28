@@ -180,6 +180,18 @@ public class CharacterMovement : MonoBehaviour
         return Physics2D.Raycast(_raycastOriginLeft, Vector2.down, raycastDistance, platformLayer) ||
             Physics2D.Raycast(_raycastOriginRight, Vector2.down, raycastDistance, platformLayer);
     }
+
+    public void PauseCat()
+    {
+        animator.StopPlayback();
+        rb.simulated = false;
+    }
+
+    public void ResumeCat()
+    {
+        animator.StartPlayback();
+        rb.simulated = true;
+    }
     #endregion
 
 }
