@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 12
-  hitForce: 2.5
+  hitForce: 0.5
   movesRight: 1
   rotationOffset: 15
   followObject: {fileID: 1736015884424780989}
