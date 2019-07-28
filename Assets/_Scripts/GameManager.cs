@@ -13,11 +13,6 @@ public class GameManager : MonoBehaviour
 
     public CharacterMovement player1, player2;
 
-    void Start()
-    {
-        
-    }
-    
     void Update()
     {
         if (Input.GetButtonDown("StartButton"))
