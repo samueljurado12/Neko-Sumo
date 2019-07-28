@@ -18,6 +18,11 @@ public class MainMenuScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    public void FocusButton()
+    {
+        buttons[0].Select();
+    }
+
     public void Update()
     {
         if (Input.GetMouseButtonDown(0) && ScenesManager.Instance.IsJoystickConnected())
@@ -25,6 +30,11 @@ public class MainMenuScript : MonoBehaviour
     }
     
     public void StartGameButton()
+    {
+        Instrucciones.Instance.Show();
+    }
+
+    public void StartGame()
     {
         ScenesManager.Instance.LoadScene(1);
     }

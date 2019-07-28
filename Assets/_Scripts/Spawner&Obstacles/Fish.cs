@@ -48,7 +48,8 @@ public class Fish : Obstacle
     {
         if (collider.gameObject.layer == 9 && rb.velocity.y < 0.5)
         {
-            collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * transform.localScale.y * -1 * hitForce
+            collider.gameObject.GetComponent<Rigidbody2D>().AddForce(
+                Vector2.right * transform.localScale.y * -1 * hitForce * speed
                     , ForceMode2D.Impulse);
             GetComponent<Collider2D>().enabled = false;
         }
