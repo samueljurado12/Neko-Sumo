@@ -38,7 +38,10 @@ public class WinScreen : MonoBehaviour
         if (ScenesManager.Instance.IsJoystickConnected())
             firstButton.Select();
 
-        label.text = "GANA EL JUGADOR " + playerNumber;
+        if (playerNumber == 1)
+            label.text = "GANA EL JUGADOR ROJO";
+        if (playerNumber == 2)
+            label.text = "GANA EL JUGADOR AZUL";
 
         belt.color = playerNumber == 1 ? new Color(204, 0, 0) : new Color(0, 116, 204);
 
