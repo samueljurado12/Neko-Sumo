@@ -192,6 +192,11 @@ public class CharacterMovement : MonoBehaviour
         animator.StartPlayback();
         rb.simulated = true;
     }
+
+    public void AddForce(float force)
+    {
+        rb.AddForce(transform.right * transform.localScale.x * force);
+    }
     #endregion
 
 }

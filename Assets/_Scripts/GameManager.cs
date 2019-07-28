@@ -24,6 +24,12 @@ public class GameManager : MonoBehaviour
         {
             PauseMenu.Instance.SwitchMenu();
         }
+
+        if (Vector2.Distance(player1.transform.position, player2.transform.position) < 2)
+        {
+            player1.AddForce(-10);
+            player2.AddForce(-10);
+        }
     }
 
     public void Pause()
