@@ -536,7 +536,7 @@ PrefabInstance:
     - target: {fileID: 7692402801942232062, guid: 38f60c12c84837c4a8a14bb96ec8659f,
         type: 3}
       propertyPath: dashPower
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7692402801942232062, guid: 38f60c12c84837c4a8a14bb96ec8659f,
         type: 3}
@@ -551,44 +551,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1352902707, guid: 38f60c12c84837c4a8a14bb96ec8659f, type: 3}
-      propertyPath: cooldown
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1352902707, guid: 38f60c12c84837c4a8a14bb96ec8659f, type: 3}
-      propertyPath: launchForce
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3473610244814336597, guid: 38f60c12c84837c4a8a14bb96ec8659f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3723005956424000090, guid: 38f60c12c84837c4a8a14bb96ec8659f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3117768595966618815, guid: 38f60c12c84837c4a8a14bb96ec8659f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6405780543841071345, guid: 38f60c12c84837c4a8a14bb96ec8659f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8973141552441819654, guid: 38f60c12c84837c4a8a14bb96ec8659f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189806022306546986, guid: 38f60c12c84837c4a8a14bb96ec8659f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38f60c12c84837c4a8a14bb96ec8659f, type: 3}
@@ -717,11 +679,6 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6111823574208449841, guid: 38f60c12c84837c4a8a14bb96ec8659f,
-        type: 3}
-      propertyPath: jumpForce
-      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6111823574208449846, guid: 38f60c12c84837c4a8a14bb96ec8659f,
         type: 3}
@@ -891,12 +848,12 @@ PrefabInstance:
     - target: {fileID: 7692402801942232062, guid: 38f60c12c84837c4a8a14bb96ec8659f,
         type: 3}
       propertyPath: dashPower
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7692402801942232062, guid: 38f60c12c84837c4a8a14bb96ec8659f,
         type: 3}
       propertyPath: cooldownDash
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7692402801942232062, guid: 38f60c12c84837c4a8a14bb96ec8659f,
         type: 3}
@@ -911,44 +868,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1352902707, guid: 38f60c12c84837c4a8a14bb96ec8659f, type: 3}
-      propertyPath: launchForce
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1352902707, guid: 38f60c12c84837c4a8a14bb96ec8659f, type: 3}
-      propertyPath: cooldown
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3473610244814336597, guid: 38f60c12c84837c4a8a14bb96ec8659f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3723005956424000090, guid: 38f60c12c84837c4a8a14bb96ec8659f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3117768595966618815, guid: 38f60c12c84837c4a8a14bb96ec8659f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6405780543841071345, guid: 38f60c12c84837c4a8a14bb96ec8659f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8973141552441819654, guid: 38f60c12c84837c4a8a14bb96ec8659f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4189806022306546986, guid: 38f60c12c84837c4a8a14bb96ec8659f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38f60c12c84837c4a8a14bb96ec8659f, type: 3}

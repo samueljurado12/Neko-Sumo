@@ -1189,26 +1189,12 @@ MonoBehaviour:
     m_Bits: 1024
   tail: {fileID: 6951338888958808514}
   belt: {fileID: 6951338888828834960}
-  leftMoustache:
-  - {fileID: 7142418149894005093}
-  - {fileID: 5478513762669219083}
-  - {fileID: 1868911462405606563}
-  - {fileID: 510679525947206153}
-  - {fileID: 8651269764073036724}
-  - {fileID: 4195966094795822886}
-  rightMoustache:
-  - {fileID: 9061284429161799586}
-  - {fileID: 7313228329433384937}
-  - {fileID: 6977606305861234699}
-  - {fileID: 1921168088442626598}
-  - {fileID: 8154830565352208992}
-  - {fileID: 8385462922556494088}
   speed: 6
   fallMultiplier: 3
   lowJumpMultiplier: 2.5
   raycastDistance: 1.2
   forceMultiplier: 5
-  jumpForce: 12
+  jumpForce: 7
 --- !u!114 &286128666
 MonoBehaviour:
   m_ObjectHideFlags: 0
