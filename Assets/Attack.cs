@@ -13,11 +13,14 @@ public class Attack : MonoBehaviour
     [SerializeField]
     float meleePower = 500;
 
+    AudioSource audioSource;
+
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
         cm = GetComponent<CharacterMovement>();
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -25,6 +28,7 @@ public class Attack : MonoBehaviour
         if (Input.GetButtonDown("Melee" + cm.PlayerNumber))
         {
             animator.SetTrigger("Attack");
+            AudioManager.Instance.MeleeAttack(audioSource);
 
             Vector3 origin = transform.position + transform.right * transform.localScale.x;
             Vector3 dir = Vector3.right * transform.localScale.x;
@@ -47,6 +51,7 @@ public class Attack : MonoBehaviour
 
         if (Input.GetButtonDown("Dash" + cm.PlayerNumber) && cm.GetGrounded() && timeRemainingDash <= 0)
         {
+            AudioManager.Instance.Dash(audioSource);
             animator.SetTrigger("Dash");
             timeRemainingDash = cooldownDash;
         }

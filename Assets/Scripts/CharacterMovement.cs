@@ -47,6 +47,7 @@ public class CharacterMovement : MonoBehaviour
     #region Input and Unity components
     private float horizontalAxis;
     private Rigidbody2D rb;
+    private AudioSource audioSource;
     #endregion
 
     #region Private variables
@@ -57,6 +58,10 @@ public class CharacterMovement : MonoBehaviour
     #endregion
 
     #region Unity methods
+    private void Awake() {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -160,6 +165,7 @@ public class CharacterMovement : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jumpRequest = false;
             animator.SetTrigger("Jump");
+            AudioManager.Instance.Jump(audioSource);
         }
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Jump") && GetGrounded())
         {

@@ -10,6 +10,8 @@ public class OffScreen : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.Instance.WaterFall(other.gameObject.GetComponent<AudioSource>());
+            AudioManager.Instance.Splash();
             int player = other.GetComponent<CharacterMovement>().PlayerNumber;
             Animator ganador = null;
             int n = 0;

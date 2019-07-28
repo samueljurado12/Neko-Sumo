@@ -11,6 +11,11 @@ public class BallLauncher : MonoBehaviour
     Animator anim;
     [SerializeField]
     GameObject ballHolder;
+    AudioSource audioSource;
+
+    private void Awake() {
+        audioSource = gameObject.transform.GetComponentInParent<AudioSource>();
+    }
 
     void Start()
     {
@@ -24,6 +29,7 @@ public class BallLauncher : MonoBehaviour
 
         if (Input.GetButtonDown("Furball" + GetComponentInParent<CharacterMovement>().PlayerNumber) && timeRemaining <= 0)
         {
+            AudioManager.Instance.DistantAttack(audioSource);
             anim.SetTrigger("Spit");
             timeRemaining = cooldown;
         }
