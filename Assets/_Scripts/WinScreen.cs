@@ -20,6 +20,9 @@ public class WinScreen : MonoBehaviour
     [SerializeField]
     Image belt;
 
+    [SerializeField]
+    private Color red, blue;
+
     void Awake()
     {
         Instance = this;
@@ -43,7 +46,8 @@ public class WinScreen : MonoBehaviour
         if (playerNumber == 2)
             label.text = "GANA EL JUGADOR AZUL";
 
-        belt.color = playerNumber == 1 ? new Color(149, 27, 27) : new Color(42, 109, 161);
+        Debug.Log("cambio de color");
+        belt.color = playerNumber == 1 ? red : blue;
 
     }
 
