@@ -1194,7 +1194,7 @@ MonoBehaviour:
   lowJumpMultiplier: 2.5
   raycastDistance: 1.2
   forceMultiplier: 5
-  jumpForce: 7
+  jumpForce: 12
 --- !u!114 &286128666
 MonoBehaviour:
   m_ObjectHideFlags: 0
