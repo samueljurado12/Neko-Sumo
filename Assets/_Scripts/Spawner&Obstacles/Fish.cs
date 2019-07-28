@@ -21,7 +21,7 @@ public class Fish : Obstacle
         movesRight = transform.localEulerAngles.z < 90;
         transform.localScale = movesRight ? new Vector3(1, -1, 1) : Vector3.one;
         rb.velocity = (followObject.position - transform.position) * speed;
-        Destroy(gameObject, 7);
+        Destroy(gameObject, 8);
     }
 
     private void FixedUpdate()
