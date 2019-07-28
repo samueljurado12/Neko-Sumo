@@ -1505,7 +1505,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: JUGAR
+  m_text: CONTINUAR
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cee1c5311b03ff84785018542c48b650, type: 2}
   m_sharedMaterial: {fileID: -6476142411863724218, guid: cee1c5311b03ff84785018542c48b650,
@@ -1575,7 +1575,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 949557290}
-    characterCount: 5
+    characterCount: 9
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -1891,10 +1891,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913f5e74ff2b58c4d8d7f77547928872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1AudioSource: {fileID: 0}
   sfx: {fileID: 1174303319}
   botonSeleccionado: {fileID: 8300000, guid: 3b1cd5d29bffcd34b99948c0fa7a7095, type: 3}
   botonPulsado: {fileID: 8300000, guid: d5aa6ecd2acd4134db1fb4c5c4c172e3, type: 3}
   victory: {fileID: 0}
+  dash: {fileID: 0}
+  distantAttack1: {fileID: 0}
+  distantAttack2: {fileID: 0}
+  jump: {fileID: 0}
+  waterFall1: {fileID: 0}
+  waterFall2: {fileID: 0}
+  meleeAttack: {fileID: 0}
+  meow1: {fileID: 0}
+  meow2: {fileID: 0}
+  meowStart: {fileID: 0}
+  splash: {fileID: 0}
 --- !u!4 &1174303321
 Transform:
   m_ObjectHideFlags: 0
