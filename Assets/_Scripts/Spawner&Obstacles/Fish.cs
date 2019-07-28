@@ -11,15 +11,17 @@ public class Fish : Obstacle
     [SerializeField] private Transform followObject;
     [SerializeField] private Transform pivot;
 
-    private Vector3 objectiveRotation;
+    private SpriteRenderer sprite;
 
     protected override void Behaviour()
     {
+        sprite = GetComponentInChildren<SpriteRenderer>();
+        sprite.sortingOrder = -1;
         transform.localEulerAngles = new Vector3(0, 0, Random.Range(90 - rotationOffset, 90 + rotationOffset));
-        objectiveRotation = new Vector3(0, 0, -transform.localEulerAngles.z);
         movesRight = transform.localEulerAngles.z < 90;
         transform.localScale = movesRight ? new Vector3(1, -1, 1) : Vector3.one;
         rb.velocity = (followObject.position - transform.position) * speed;
+        Destroy(gameObject, 7);
     }
 
     private void FixedUpdate()
@@ -29,18 +31,27 @@ public class Fish : Obstacle
         followObject.localPosition = Vector3.Normalize(rb.velocity);
         float rotationIndex = followObject.position.z;
 
-        //Vector3 diff = followObject.localPosition - transform.position;
-        //diff.Normalize();
+        if (rb.velocity.y < 0)
+        {
+            sprite.sortingOrder = 9;
+        }
 
-        //float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        //transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
-
-        var newRotation = Quaternion.LookRotation(followObject.position- transform.position, Vector3.forward);
+        var newRotation = Quaternion.LookRotation(followObject.position - transform.position, Vector3.forward);
         newRotation.x = 0;
         newRotation.y = 0;
         transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime);
 
-        //transform.LookAt(followObject);
         rb.velocity -= acceleration;
+    }
+
+    private void OnTriggerStay2D(Collider2D collider)
+    {
+        if (collider.gameObject.layer == 9 && rb.velocity.y < 0.5)
+        {
+            collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * transform.localScale.y * -1 * hitForce
+                    , ForceMode2D.Impulse);
+            GetComponent<Collider2D>().enabled = false;
+        }
+
     }
 }

@@ -17,8 +17,7 @@ public class CharacterMovement : MonoBehaviour
     [Range(1, 2)]
     private int playerNumber;
 
-    public int PlayerNumber
-    {
+    public int PlayerNumber {
         get { return playerNumber; }
     }
 
@@ -27,6 +26,8 @@ public class CharacterMovement : MonoBehaviour
 
     [SerializeField]
     private GameObject tail, belt;
+
+    [SerializeField] List<SpringBone> leftMoustache, rightMoustache;
 
     [Range(1, 10)]
     [SerializeField]
@@ -124,6 +125,11 @@ public class CharacterMovement : MonoBehaviour
         {
             animator.SetBool("Running", false);
         }
+        SetSpringBoneFacing();
+    }
+
+    private void SetSpringBoneFacing()
+    {
         foreach (SpringBone t in tail.GetComponentsInChildren<SpringBone>())
         {
             t.springForce.x = -0.001f * transform.localScale.x;
@@ -131,6 +137,16 @@ public class CharacterMovement : MonoBehaviour
             {
                 t.stiffnessForce *= -1;
             }
+        }
+        foreach (SpringBone b in leftMoustache)
+        {
+            b.springForce.x = 0.01f * transform.localScale.x;
+            b.stiffnessForce = 0.1f * transform.localScale.x;
+        }
+        foreach (SpringBone b in rightMoustache)
+        {
+            b.springForce.x = -0.01f * transform.localScale.x;
+            b.stiffnessForce = 0.1f * transform.localScale.x;
         }
     }
 
